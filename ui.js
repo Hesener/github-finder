@@ -26,6 +26,8 @@ class UI {
                     </div>
                 </div>
             </div>
+            <h3 class="page-heading mb-3">User Grass</h3>
+            <div id="grass"></div>
             <h3 class="page-heading mb-3">Latest Repos</h3>
             <div id="repos"></div>
         `;
@@ -53,6 +55,12 @@ class UI {
 
         // Output repos
         document.getElementById('repos').innerHTML = output;
+    }
+
+    showGrass(user) {
+        document.getElementById('grass').innerHTML = `
+            <img class="img-responsive mb-3" src="https://ghchart.rshah.org/${user.login}" alt="user grass">
+        `;
     }
 
     // Show alert message
